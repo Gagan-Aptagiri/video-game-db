@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Pipe } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 
 import { APIResponse, Game } from 'src/app/models';
@@ -34,6 +34,7 @@ export class HomeComponent implements OnInit {
       .subscribe((gameList: APIResponse<Game>) => {
         this.games = gameList.results;
         console.log(gameList);
+        console.log(this.games);
       });
   }
 }
